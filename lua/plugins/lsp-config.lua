@@ -17,15 +17,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      lspconfig.lua_ls.setup({})
-      lspconfig.ts_ls.setup({})
-      lspconfig.ruby_lsp.setup({
-        capabilities = capabilities,
+      vim.lsp.config('lua_ls', {})
+      vim.lsp.config('ts_ls', {})
+      vim.lsp.config('ruby_lsp', {
+        capabilities = capabilities
       })
-
-      lspconfig.gopls.setup({
+      vim.lsp.config('gopls', {
         settings = {
           gopls = {
             analyses = {

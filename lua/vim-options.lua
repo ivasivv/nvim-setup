@@ -7,6 +7,9 @@ vim.cmd("set number")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.numberwidth = 2
 vim.opt.swapfile = false
 vim.keymap.set("i", "jj", "<Esc>", { silent = true, desc = "Exit insert mode with jj" })
 vim.keymap.set("i", "jk", "<Esc>", { silent = true, desc = "Exit insert mode with jk" })

@@ -7,7 +7,8 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-       ensure_installed = {"lua_ls", "ts_ls", "ruby_lsp", "gopls"}
+       ensure_installed = {"lua_ls", "ts_ls", "gopls"}
+      -- ruby_lsp
     },
     dependencies = {
         { "mason-org/mason.nvim", opts = {} },
@@ -17,12 +18,12 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
       vim.lsp.config('lua_ls', {})
       vim.lsp.config('ts_ls', {})
-      vim.lsp.config('ruby_lsp', {
-        capabilities = capabilities
-      })
+      -- vim.lsp.config('ruby_lsp', {
+      --   capabilities = capabilities
+      -- })
       vim.lsp.config('gopls', {
         settings = {
           gopls = {

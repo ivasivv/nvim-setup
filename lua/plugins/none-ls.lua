@@ -1,12 +1,11 @@
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()
-		local null_ls = require("null-ls")
-		null_ls.setup({
+		local none_ls = require("null-ls")
+		none_ls.setup({
 			sources = {
-				null_ls.builtins.formatting.stylua,
-				--null_ls.builtins.diagnostics.rubocop,
-				null_ls.builtins.formatting.rubocop,
+				none_ls.builtins.formatting.stylua,
+				-- none_ls.builtins.formatting.rubocop,
 			},
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
